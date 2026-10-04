@@ -1,0 +1,14 @@
+# Nothing but published output belongs in this repo.
+*.parquet
+bhavcopy/
+uploads/
+watch_state/
+predictions/
+pit_archive/
+*.db
+watch_config.json
+system_switches.json
+.git_token
+__pycache__/
+*.pyc
+.venv/

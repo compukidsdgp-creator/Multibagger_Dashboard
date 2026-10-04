@@ -1,0 +1,177 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Filing dashboard</title><style>
+:root{--bg:#0d1017;--card:#161a22;--card2:#1c212b;--line:#252b38;--tx:#e6e8ee;
+--dim:#8b93a7;--pos:#3fb950;--neg:#f85149;--warn:#d29922;--acc:#58a6ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);
+font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1140px;margin:0 auto;padding:26px 18px 70px}
+h1{font-size:22px;margin:0 0 4px;font-weight:600}
+h2{font-size:15px;margin:0 0 4px;font-weight:600}
+.sub{color:var(--dim);font-size:12.5px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;
+padding:20px;margin-bottom:16px}
+.verdict{background:var(--card2);border-left:3px solid var(--acc);
+padding:11px 14px;border-radius:0 6px 6px 0;margin-top:16px;font-size:13px}
+.verdict b{color:var(--acc)}
+.verdict.warn{border-left-color:var(--warn)}.verdict.warn b{color:var(--warn)}
+.verdict.neg{border-left-color:var(--neg)}.verdict.neg b{color:var(--neg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.kpi{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:13px}
+.kpi .n{font-size:23px;font-weight:600}
+.kpi .l{color:var(--dim);font-size:10.5px;text-transform:uppercase;
+letter-spacing:.6px;margin-top:3px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;color:var(--dim);font-weight:500;font-size:10.5px;
+text-transform:uppercase;letter-spacing:.5px;padding:8px 9px;
+border-bottom:1px solid var(--line);cursor:pointer;user-select:none}
+th:hover{color:var(--tx)}
+th.sorted::after{content:" \2193";color:var(--acc)}
+th.asc::after{content:" \2191";color:var(--acc)}
+td{padding:9px;border-bottom:1px solid var(--line)}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:var(--card2)}
+.pos{color:var(--pos)}.neg{color:var(--neg)}.dim{color:var(--dim)}.warn{color:var(--warn)}
+.bar{height:6px;background:var(--bg);border-radius:3px;overflow:hidden;min-width:60px}
+.bar>i{display:block;height:100%}
+.note{color:var(--dim);font-size:12px;margin-top:10px}
+.empty{color:var(--dim);text-align:center;padding:24px;font-size:13px}
+.chip{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11.5px;
+background:var(--bg);border:1px solid var(--line);margin:0 6px 6px 0;cursor:pointer}
+.chip.on{background:var(--acc);border-color:var(--acc);color:#04101f;font-weight:600}
+input[type=range]{width:100%;accent-color:var(--acc);margin:14px 0 4px}
+input[type=search]{background:var(--bg);border:1px solid var(--line);color:var(--tx);
+border-radius:7px;padding:8px 11px;font-size:13px;width:220px;margin-bottom:12px}
+.act{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);
+align-items:flex-start}
+.act:last-child{border-bottom:none}
+.act .rank{font-size:19px;font-weight:600;color:var(--dim);min-width:26px}
+.act .why{color:var(--dim);font-size:12.5px;margin-top:2px}
+.detail{display:none;background:var(--bg)}
+.detail td{padding:12px 14px;font-size:12.5px;color:var(--dim)}
+.big{font-size:30px;font-weight:600;color:var(--acc)}
+.strip{display:inline-flex;gap:2px;vertical-align:middle}
+.strip>i{width:7px;height:16px;border-radius:2px;display:block}
+.ev{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);
+align-items:baseline;font-size:12.5px}
+.ev:last-child{border-bottom:none}
+.ev .d{color:var(--dim);min-width:52px;font-variant-numeric:tabular-nums}
+.ev .c{min-width:112px;font-size:11px;text-transform:uppercase;letter-spacing:.4px}
+.ev .v{color:var(--tx);min-width:74px;font-variant-numeric:tabular-nums}
+.ev .h{color:var(--dim);flex:1}
+</style></head><body><div class="wrap">
+<h1>Filing dashboard</h1>
+<div class="sub" style="margin-bottom:22px">05 Sep to 01 Oct 2026 &middot; generated
+04 Oct 2026 20:03 &middot; shadow mode &middot; research use, not
+investment advice</div>
+<div class="card" style="border-color:var(--warn)"><b class="warn">Early days.</b> 38 alert(s) logged. This becomes informative at around 50, four to eight weeks of running. Panels are shown so you can watch them fill, not so you can conclude from them.</div><div class="card"><h2>Do this</h2><div class="act"><div class="rank">1</div><div><b>Review SPECIALITY for removal</b><div class="why">2 negative filings against 0 positive. Regulatory actions and pledge changes contradict most bullish theses in a micro-cap.</div></div></div><div class="act"><div class="rank">2</div><div><b>Review UGARSUGAR for removal</b><div class="why">2 negative filings against 0 positive. Regulatory actions and pledge changes contradict most bullish theses in a micro-cap.</div></div></div><div class="act"><div class="rank">3</div><div><b>Read the filings for ARIS (swing +100)</b><div class="why">3 order wins or acquisitions, and the recent flow is positive. Nothing negative on record.</div></div></div><div class="act"><div class="rank">4</div><div><b>Read the filings for MAWANASUG (swing +62)</b><div class="why">3 order wins or acquisitions, and the recent flow is positive. Its record includes 1 older negative(s), so this is a turnaround rather than a clean run.</div></div></div><div class="act"><div class="rank">5</div><div><b>Read the filings for AVTNPL</b><div class="why">2 order wins or acquisitions, nothing negative. This is the pattern the screen exists to find.</div></div></div><div class="act"><div class="rank">6</div><div><b>Read the filings for GLOBAL</b><div class="why">2 order wins or acquisitions, nothing negative. This is the pattern the screen exists to find.</div></div></div></div><div class="card"><h2>Filter funnel</h2><div class="grid"><div class="kpi"><div class="n ">39</div><div class="l">filings classified</div></div><div class="kpi"><div class="n pos">38</div><div class="l">alerted</div></div><div class="kpi"><div class="n dim">1</div><div class="l">suppressed</div></div><div class="kpi"><div class="n ">10.6</div><div class="l">alerts per week</div></div></div><table style="margin-top:14px"><thead><tr><th onclick="sortTable(this)">Why suppressed</th><th onclick="sortTable(this)">Count</th><th style="width:130px"></th></tr></thead><tbody><tr><td>per-symbol cap of 2 reached</td><td data-v="1">1</td><td><div class="bar"><i style="width:100%;background:var(--dim)"></i></div></td></tr></tbody></table><div class="verdict "><b>10.6 alerts a week</b> is a readable rate. Leave the thresholds alone.</div></div><div class="card"><h2>Threshold simulator</h2>
+<div class="sub">Drag to see what a different materiality floor would have
+delivered, computed from your real suppressed log.</div>
+<div style="text-align:center;margin:8px 0 0"><span class="big" id="thrVal">
+2.0%</span></div>
+<input type="range" id="thr" min="0.2" max="10" step="0.1" value="2.0"
+ oninput="recalc(this.value)">
+<div class="grid" style="margin-top:12px">
+<div class="kpi"><div class="n" id="simAlerts">-</div>
+<div class="l">alerts over the period</div></div>
+<div class="kpi"><div class="n" id="simWeek">-</div>
+<div class="l">alerts per week</div></div>
+<div class="kpi"><div class="n pos" id="simRec">-</div>
+<div class="l">recovered vs now</div></div></div>
+<div class="note">Would recover: <span id="simNames" class="dim">-</span></div>
+<div class="verdict" id="simVerdict"></div>
+<script>
+const SUPPRESSED=[{"s": "MAWANASUG", "cut": "other", "m": null}];
+const ALERTS_N=38;
+const WEEKS=3.6;
+const CUR_THR=2.0;
+</script></div><div class="card"><h2>What you are being told about</h2><table><thead><tr><th onclick="sortTable(this)">Category</th><th onclick="sortTable(this)">Count</th><th>Share</th><th style="width:140px"></th></tr></thead><tbody><tr><td>order win</td><td data-v="20">20</td><td>53%</td><td><div class="bar"><i style="width:53%;background:var(--pos)"></i></div></td></tr><tr><td>regulatory action</td><td data-v="10">10</td><td>26%</td><td><div class="bar"><i style="width:26%;background:var(--neg)"></i></div></td></tr><tr><td>acquisition</td><td data-v="7">7</td><td>18%</td><td><div class="bar"><i style="width:18%;background:var(--pos)"></i></div></td></tr><tr><td>pledge change</td><td data-v="1">1</td><td>3%</td><td><div class="bar"><i style="width:3%;background:var(--neg)"></i></div></td></tr></tbody></table><div class="verdict "><b>71% positive.</b> The feed is dominated by the events you are hunting.</div></div><div class="card"><h2>Filing posture by company</h2>
+<div class="sub">Polarity from the classifier, not language analysis. The strip
+reads oldest to newest; swing weights recent events more heavily
+(30-day half-life, needs 3+ filings).</div>
+<div style="margin:12px 0 6px">
+<span class="chip on" onclick="chipFilter(this,'coTable','all')">All</span>
+<span class="chip" onclick="chipFilter(this,'coTable','pos')">Net positive</span>
+<span class="chip" onclick="chipFilter(this,'coTable','neg')">Net negative</span>
+</div>
+<input type="search" placeholder="filter by symbol"
+ oninput="filterTable(this,'coTable')">
+<table id="coTable"><thead><tr>
+<th onclick="sortTable(this)">Symbol</th><th>Sequence</th>
+<th onclick="sortTable(this)">Events</th><th onclick="sortTable(this)">Pos</th>
+<th onclick="sortTable(this)">Neg</th><th onclick="sortTable(this)">Net</th>
+<th onclick="sortTable(this)" class="sorted">Swing</th>
+<th onclick="sortTable(this)">Last</th></tr></thead>
+<tbody><tr onclick="toggleRow(this)" data-cat="pos"><td><b>ARIS</b></td><td><span class="strip"><i style="background:var(--pos)" title="28 Sep acquisition"></i><i style="background:var(--pos)" title="29 Sep order win"></i><i style="background:var(--pos)" title="29 Sep order win"></i></span></td><td data-v="3">3</td><td class="pos" data-v="3">3</td><td class="neg" data-v="0">0</td><td class="pos" data-v="3"><b>+3</b></td><td data-v="100.0"><span class="pos"><b>↗ +100</b></span></td><td class="dim">29 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">29 Sep</span><span class="c pos">order win</span><span class="v">₹400 cr (34.1%)</span><span class="h">Arisinfra Solutions Limited has informed the Exchange regarding a press release dated September 29, 2026, titl</span></div><div class="ev"><span class="d">29 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Arisinfra Solutions Limited has informed the Exchange about Bagging/Receiving of orders/contracts through its </span></div><div class="ev"><span class="d">28 Sep</span><span class="c pos">acquisition</span><span class="v">&mdash;</span><span class="h">Arisinfra Solutions Limited has informed the Exchange regarding a press release dated September 28, 2026, titl</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>MAWANASUG</b></td><td><span class="strip"><i style="background:var(--neg)" title="05 Sep regulatory action"></i><i style="background:var(--pos)" title="05 Sep acquisition"></i><i style="background:var(--pos)" title="27 Sep order win"></i><i style="background:var(--pos)" title="27 Sep order win"></i></span></td><td data-v="4">4</td><td class="pos" data-v="3">3</td><td class="neg" data-v="1">1</td><td class="pos" data-v="2"><b>+2</b></td><td data-v="62.5"><span class="pos"><b>↗ +62</b></span></td><td class="dim">27 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">27 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Significant increase in volume has been observed in Mawana Sugars Limited. The Exchange, in order to ensure th</span></div><div class="ev"><span class="d">27 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Significant increase in volume has been observed in Mawana Sugars Limited. The Exchange, in order to ensure th</span></div><div class="ev"><span class="d">05 Sep</span><span class="c pos">acquisition</span><span class="v">&mdash;</span><span class="h">Mawana Sugars Limited has informed the Exchange regarding &#x27;Intimation under Regulation 30 of the SEBI (Listing</span></div><div class="ev"><span class="d">05 Sep</span><span class="c neg">regulatory action</span><span class="v">&mdash;</span><span class="h">Mawana Sugars Limited has informed the Exchange regarding &#x27;Disclosure/Intimation under Regulation 30 of SEBI (</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>AVTNPL</b></td><td><span class="strip"><i style="background:var(--pos)" title="22 Sep order win"></i><i style="background:var(--pos)" title="23 Sep order win"></i></span></td><td data-v="2">2</td><td class="pos" data-v="2">2</td><td class="neg" data-v="0">0</td><td class="pos" data-v="2"><b>+2</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">23 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">23 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Significant increase in volume has been observed in AVT Natural Products Limited. The Exchange, in order to en</span></div><div class="ev"><span class="d">22 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Significant increase in volume has been observed in AVT Natural Products Limited. The Exchange, in order to en</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>GLOBAL</b></td><td><span class="strip"><i style="background:var(--pos)" title="05 Sep acquisition"></i><i style="background:var(--pos)" title="21 Sep order win"></i></span></td><td data-v="2">2</td><td class="pos" data-v="2">2</td><td class="neg" data-v="0">0</td><td class="pos" data-v="2"><b>+2</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">21 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">21 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Global Education Limited has informed the Exchange about Awarding of order(s)/contract(s)</span></div><div class="ev"><span class="d">05 Sep</span><span class="c pos">acquisition</span><span class="v">&mdash;</span><span class="h">Global Education Limited has informed the Exchange about General Updates - Update on allotment of equity share</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>INDNIPPON</b></td><td><span class="strip"><i style="background:var(--pos)" title="10 Sep order win"></i><i style="background:var(--pos)" title="10 Sep order win"></i></span></td><td data-v="2">2</td><td class="pos" data-v="2">2</td><td class="neg" data-v="0">0</td><td class="pos" data-v="2"><b>+2</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">10 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">10 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Significant increase in volume has been observed in India Nippon Electricals Limited. The Exchange, in order t</span></div><div class="ev"><span class="d">10 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Significant increase in volume has been observed in India Nippon Electricals Limited. The Exchange, in order t</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>RACLGEAR</b></td><td><span class="strip"><i style="background:var(--pos)" title="11 Sep order win"></i><i style="background:var(--pos)" title="16 Sep order win"></i></span></td><td data-v="2">2</td><td class="pos" data-v="2">2</td><td class="neg" data-v="0">0</td><td class="pos" data-v="2"><b>+2</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">16 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">16 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Significant increase in volume has been observed in RACL Geartech Limited. The Exchange, in order to ensure th</span></div><div class="ev"><span class="d">11 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Significant increase in volume has been observed in RACL Geartech Limited. The Exchange, in order to ensure th</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>TNPETRO</b></td><td><span class="strip"><i style="background:var(--pos)" title="25 Sep order win"></i><i style="background:var(--pos)" title="28 Sep order win"></i></span></td><td data-v="2">2</td><td class="pos" data-v="2">2</td><td class="neg" data-v="0">0</td><td class="pos" data-v="2"><b>+2</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">28 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">28 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Significant increase in volume has been observed in Tamilnadu PetroProducts Limited. The Exchange, in order to</span></div><div class="ev"><span class="d">25 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Significant increase in volume has been observed in Tamilnadu PetroProducts Limited. The Exchange, in order to</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>3IINFOLTD</b></td><td><span class="strip"><i style="background:var(--pos)" title="11 Sep order win"></i></span></td><td data-v="1">1</td><td class="pos" data-v="1">1</td><td class="neg" data-v="0">0</td><td class="pos" data-v="1"><b>+1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">11 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">11 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">3i Infotech Limited has informed the Exchange about Bagging/Receiving of orders/contracts</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>ALMONDZ</b></td><td><span class="strip"><i style="background:var(--pos)" title="01 Oct order win"></i></span></td><td data-v="1">1</td><td class="pos" data-v="1">1</td><td class="neg" data-v="0">0</td><td class="pos" data-v="1"><b>+1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">01 Oct</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">01 Oct</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Almondz Global Securities Limited has informed the Exchange about Awarding of order(s)/contract(s)</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>BLUSPRING</b></td><td><span class="strip"><i style="background:var(--pos)" title="29 Sep acquisition"></i></span></td><td data-v="1">1</td><td class="pos" data-v="1">1</td><td class="neg" data-v="0">0</td><td class="pos" data-v="1"><b>+1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">29 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">29 Sep</span><span class="c pos">acquisition</span><span class="v">&mdash;</span><span class="h">Bluspring Enterprises Limited has informed the Exchange regarding &#x27;Proposed Scheme of Amalgamation of Blusprin</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>INDSWFTLAB</b></td><td><span class="strip"><i style="background:var(--pos)" title="21 Sep acquisition"></i></span></td><td data-v="1">1</td><td class="pos" data-v="1">1</td><td class="neg" data-v="0">0</td><td class="pos" data-v="1"><b>+1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">21 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">21 Sep</span><span class="c pos">acquisition</span><span class="v">&mdash;</span><span class="h">Ind-Swift Laboratories Limited has informed the Exchange about Disclosures under Regulation 29(2) of the SEBI </span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>KAPSTON</b></td><td><span class="strip"><i style="background:var(--pos)" title="26 Sep acquisition"></i></span></td><td data-v="1">1</td><td class="pos" data-v="1">1</td><td class="neg" data-v="0">0</td><td class="pos" data-v="1"><b>+1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">26 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">26 Sep</span><span class="c pos">acquisition</span><span class="v">&mdash;</span><span class="h">Kapston Services Limited has informed the Exchange about Disclosure under Regulation 29(2) of SEBI (Substantia</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>MWL</b></td><td><span class="strip"><i style="background:var(--pos)" title="13 Sep order win"></i></span></td><td data-v="1">1</td><td class="pos" data-v="1">1</td><td class="neg" data-v="0">0</td><td class="pos" data-v="1"><b>+1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">13 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">13 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Significant increase in volume has been observed in Mangalam Worldwide Limited. The Exchange, in order to ensu</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>PPAP</b></td><td><span class="strip"><i style="background:var(--pos)" title="01 Oct order win"></i></span></td><td data-v="1">1</td><td class="pos" data-v="1">1</td><td class="neg" data-v="0">0</td><td class="pos" data-v="1"><b>+1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">01 Oct</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">01 Oct</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Proceedings of Meetings of equity shareholders, secured and unsecured creditors of the Company pursuant to NCL</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>SHREEPUSHK</b></td><td><span class="strip"><i style="background:var(--pos)" title="01 Oct acquisition"></i></span></td><td data-v="1">1</td><td class="pos" data-v="1">1</td><td class="neg" data-v="0">0</td><td class="pos" data-v="1"><b>+1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">01 Oct</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">01 Oct</span><span class="c pos">acquisition</span><span class="v">&mdash;</span><span class="h">Shree Pushkar Chemicals &amp; Fertilisers Limited has informed the Exchange about Amalgamation/Merger</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>SUBEXLTD</b></td><td><span class="strip"><i style="background:var(--pos)" title="23 Sep order win"></i></span></td><td data-v="1">1</td><td class="pos" data-v="1">1</td><td class="neg" data-v="0">0</td><td class="pos" data-v="1"><b>+1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">23 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">23 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Subex secured a contract with a major mobile network operator in the Asia Pacific region</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>TALBROAUTO</b></td><td><span class="strip"><i style="background:var(--pos)" title="11 Sep order win"></i></span></td><td data-v="1">1</td><td class="pos" data-v="1">1</td><td class="neg" data-v="0">0</td><td class="pos" data-v="1"><b>+1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">11 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">11 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">Significant increase in volume has been observed in Talbros Automotive Components Limited. The Exchange, in or</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="pos"><td><b>UNIDT</b></td><td><span class="strip"><i style="background:var(--pos)" title="10 Sep order win"></i></span></td><td data-v="1">1</td><td class="pos" data-v="1">1</td><td class="neg" data-v="0">0</td><td class="pos" data-v="1"><b>+1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">10 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">10 Sep</span><span class="c pos">order win</span><span class="v">&mdash;</span><span class="h">United Drilling Tools Limited has informed the Exchange about Bagging/Receiving of orders/contracts</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="neg"><td><b>AARTISURF</b></td><td><span class="strip"><i style="background:var(--neg)" title="25 Sep regulatory action"></i></span></td><td data-v="1">1</td><td class="pos" data-v="0">0</td><td class="neg" data-v="1">1</td><td class="neg" data-v="-1"><b>-1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">25 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">25 Sep</span><span class="c neg">regulatory action</span><span class="v">&mdash;</span><span class="h">Aarti Surfactants Limited has informed the Exchange about Action(s) taken or orders passed</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="neg"><td><b>GANDHAR</b></td><td><span class="strip"><i style="background:var(--neg)" title="24 Sep regulatory action"></i></span></td><td data-v="1">1</td><td class="pos" data-v="0">0</td><td class="neg" data-v="1">1</td><td class="neg" data-v="-1"><b>-1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">24 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">24 Sep</span><span class="c neg">regulatory action</span><span class="v">&mdash;</span><span class="h">Gandhar Oil Refinery (India) Limited has informed the Exchange that Outcome of litigation (order passed by cou</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="neg"><td><b>LANCORHOL</b></td><td><span class="strip"><i style="background:var(--neg)" title="24 Sep regulatory action"></i></span></td><td data-v="1">1</td><td class="pos" data-v="0">0</td><td class="neg" data-v="1">1</td><td class="neg" data-v="-1"><b>-1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">24 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">24 Sep</span><span class="c neg">regulatory action</span><span class="v">&mdash;</span><span class="h">Lancor Holdings Limited has informed the Exchange about Action(s) initiated or orders passed</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="neg"><td><b>OMAXE</b></td><td><span class="strip"><i style="background:var(--neg)" title="25 Sep regulatory action"></i></span></td><td data-v="1">1</td><td class="pos" data-v="0">0</td><td class="neg" data-v="1">1</td><td class="neg" data-v="-1"><b>-1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">25 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">25 Sep</span><span class="c neg">regulatory action</span><span class="v">&mdash;</span><span class="h">Omaxe Limited has informed the Exchange about Action(s) taken or orders passed by Securities and Exchange of B</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="neg"><td><b>RGL</b></td><td><span class="strip"><i style="background:var(--neg)" title="23 Sep pledge change"></i></span></td><td data-v="1">1</td><td class="pos" data-v="0">0</td><td class="neg" data-v="1">1</td><td class="neg" data-v="-1"><b>-1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">23 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">23 Sep</span><span class="c neg">pledge change</span><span class="v">&mdash;</span><span class="h">Renaissance Global Limited has informed the Exchange about Rejection of RGL s re-classification application un</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="neg"><td><b>SUNDROP</b></td><td><span class="strip"><i style="background:var(--neg)" title="30 Sep regulatory action"></i></span></td><td data-v="1">1</td><td class="pos" data-v="0">0</td><td class="neg" data-v="1">1</td><td class="neg" data-v="-1"><b>-1</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">30 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">30 Sep</span><span class="c neg">regulatory action</span><span class="v">&mdash;</span><span class="h">Sundrop Brands Limited has informed the Exchange about receipt of show cause notice from Deputy Commissioner (</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="neg"><td><b>SPECIALITY</b></td><td><span class="strip"><i style="background:var(--neg)" title="27 Sep regulatory action"></i><i style="background:var(--neg)" title="28 Sep regulatory action"></i></span></td><td data-v="2">2</td><td class="pos" data-v="0">0</td><td class="neg" data-v="2">2</td><td class="neg" data-v="-2"><b>-2</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">28 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">28 Sep</span><span class="c neg">regulatory action</span><span class="v">&mdash;</span><span class="h">Speciality Restaurants Limited has informed the Exchange about Action(s) taken or orders passed</span></div><div class="ev"><span class="d">27 Sep</span><span class="c neg">regulatory action</span><span class="v">&mdash;</span><span class="h">Speciality Restaurants Limited has informed the Exchange about Action(s) initiated or orders passed</span></div></td></tr><tr onclick="toggleRow(this)" data-cat="neg"><td><b>UGARSUGAR</b></td><td><span class="strip"><i style="background:var(--neg)" title="05 Sep regulatory action"></i><i style="background:var(--neg)" title="16 Sep regulatory action"></i></span></td><td data-v="2">2</td><td class="pos" data-v="0">0</td><td class="neg" data-v="2">2</td><td class="neg" data-v="-2"><b>-2</b></td><td data-v="-999.0"><span class="dim">-</span></td><td class="dim">16 Sep</td></tr><tr class="detail"><td colspan="8"><div class="ev"><span class="d">16 Sep</span><span class="c neg">regulatory action</span><span class="v">&mdash;</span><span class="h">The Ugar Sugar Works Limited has informed the Exchange regarding &#x27;The High court in September 11, 2026 hearing</span></div><div class="ev"><span class="d">05 Sep</span><span class="c neg">regulatory action</span><span class="v">&mdash;</span><span class="h">The Ugar Sugar Works Limited has informed the Exchange about Action(s) taken or orders passed</span></div></td></tr></tbody></table><div class="verdict "><b>ARIS</b> is improving fastest (+100). Swing weights recent filings more heavily, so it catches a company turning sour while its overall net score is still positive.</div></div><div class="card"><h2>Alert outcomes</h2><div class="grid"><div class="kpi"><div class="n ">11</div><div class="l">scored at 21d</div></div><div class="kpi"><div class="n pos">+1.0%</div><div class="l">mean move</div></div><div class="kpi"><div class="n pos">+3.9%</div><div class="l">vs market</div></div><div class="kpi"><div class="n ">64%</div><div class="l">beat the market</div></div></div><div class="verdict warn"><b>Only 11 scored alerts.</b> Indicative at best until there are 50+.</div></div>
+<div class="sub" style="margin-top:22px">Alerts are exchange filings, public the
+moment they land. This measures whether the filter selects informative events -
+not whether they could have been traded.</div>
+</div><script>
+function sortTable(th){
+  const tb=th.closest('table'), i=[...th.parentNode.children].indexOf(th);
+  const asc=!th.classList.contains('sorted');
+  [...tb.querySelectorAll('th')].forEach(h=>h.classList.remove('sorted','asc'));
+  th.classList.add(asc?'asc':'sorted');
+  const body=tb.querySelector('tbody');
+  const rows=[...body.querySelectorAll('tr:not(.detail)')];
+  rows.sort((a,b)=>{
+    const x=a.children[i].dataset.v??a.children[i].textContent;
+    const y=b.children[i].dataset.v??b.children[i].textContent;
+    const nx=parseFloat(x), ny=parseFloat(y);
+    const c=(!isNaN(nx)&&!isNaN(ny))?nx-ny:String(x).localeCompare(String(y));
+    return asc?c:-c;});
+  rows.forEach(r=>{const d=r.nextElementSibling;body.appendChild(r);
+    if(d&&d.classList.contains('detail'))body.appendChild(d);});
+}
+function toggleRow(tr){
+  const d=tr.nextElementSibling;
+  if(d&&d.classList.contains('detail'))
+    d.style.display=d.style.display==='table-row'?'none':'table-row';
+}
+function filterTable(inp,tid){
+  const q=inp.value.toLowerCase();
+  document.querySelectorAll('#'+tid+' tbody tr:not(.detail)').forEach(r=>{
+    r.style.display=r.textContent.toLowerCase().includes(q)?'':'none';
+    const d=r.nextElementSibling;
+    if(d&&d.classList.contains('detail'))d.style.display='none';
+  });
+}
+function chipFilter(el,tid,cat){
+  [...el.parentNode.children].forEach(c=>c.classList.remove('on'));
+  el.classList.add('on');
+  document.querySelectorAll('#'+tid+' tbody tr:not(.detail)').forEach(r=>{
+    r.style.display=(cat==='all'||r.dataset.cat===cat)?'':'none';});
+}
+function recalc(v){
+  const t=parseFloat(v);
+  document.getElementById('thrVal').textContent=t.toFixed(1)+'%';
+  let recovered=0, recNames={};
+  SUPPRESSED.forEach(s=>{
+    if(s.m===null||s.cut!=='materiality') return;
+    if(s.m>=t){recovered++; recNames[s.s]=(recNames[s.s]||0)+1;}
+  });
+  const total=ALERTS_N+recovered, perWeek=total/WEEKS;
+  document.getElementById('simAlerts').textContent=total;
+  document.getElementById('simRec').textContent=recovered;
+  document.getElementById('simWeek').textContent=perWeek.toFixed(1);
+  document.getElementById('simNames').textContent=
+    Object.entries(recNames).sort((a,b)=>b[1]-a[1]).slice(0,6)
+      .map(x=>x[0]+' ('+x[1]+')').join(', ')||'none';
+  const el=document.getElementById('simVerdict');
+  let msg;
+  if(Math.abs(t-CUR_THR)<0.05)
+    msg='<b>Current setting.</b> '+perWeek.toFixed(1)+' alerts a week.';
+  else if(perWeek>12)
+    msg='<b>Too noisy.</b> '+perWeek.toFixed(1)+' a week is more than you will read.';
+  else if(recovered===0)
+    msg='<b>No change.</b> Nothing was cut for materiality above this level.';
+  else
+    msg='<b>Set min_materiality_pct to '+t.toFixed(1)+'</b> to recover '+recovered+
+        ' filing(s), giving '+perWeek.toFixed(1)+' alerts a week.';
+  el.innerHTML=msg;
+}
+window.addEventListener('DOMContentLoaded',()=>{
+  const s=document.getElementById('thr'); if(s) recalc(s.value);
+});
+</script></body></html>
