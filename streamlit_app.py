@@ -88,7 +88,10 @@ elif c_h > 24 * 3:
 tab1, tab2, tab3 = st.tabs(["Cockpit", "Filing dashboard", "Ranking"])
 
 with tab1:
-    _embed(cockpit, 1500, "The cockpit")
+    # Taller again: the movement board sits above the layer boxes and the
+    # health card above the hero, so the first screenful is now two cards
+    # deep before the per-company detail starts.
+    _embed(cockpit, 2400, "The cockpit")
 
 with tab2:
     _embed(dash, 1400, "The filing dashboard")
